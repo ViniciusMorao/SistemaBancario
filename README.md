@@ -1,34 +1,46 @@
 # Sistema Bancário em Python
 
-Este projeto é um sistema bancário simples desenvolvido em Python como parte do **Curso Suzano Python Developer** na plataforma DIO (Digital Innovation One). O programa simula operações básicas de um banco, como depósitos, saques e consulta de extrato, sendo ideal para quem está aprendendo os conceitos fundamentais de Python.
+Este projeto é um sistema bancário simples desenvolvido em Python como parte do Curso **Suzano Python Developer** na plataforma DIO (Digital Innovation One). O programa simula operações básicas de um banco, como depósitos, saques, consulta de extrato, criação de contas e gerenciamento de clientes. Ideal para quem está aprendendo os conceitos fundamentais de Python e programação orientada a objetos (POO).
 
 ---
 
 ## Funcionalidades
 
-### Versão 2 (Aprimorada)
-A versão 2 do sistema bancário traz melhorias significativas em relação à versão inicial, com novas funcionalidades e uma estrutura de código mais organizada e modularizada. Abaixo estão as principais melhorias:
+### Versão 3 (Aprimorada e Modularizada)
+
+A versão 3 do sistema bancário traz melhorias significativas em relação às versões anteriores, com novas funcionalidades, uma estrutura de código mais organizada e modularizada, e a introdução de conceitos avançados de POO. Abaixo estão as principais melhorias:
 
 #### Novas Funcionalidades
-1. **Adicionar Cliente:**
-   - Permite cadastrar novos clientes com informações como nome, CPF, data de nascimento e endereço.
-   - Verifica se o CPF já está cadastrado para evitar duplicidades.
 
-2. **Adicionar Conta:**
-   - Cria uma nova conta bancária vinculada a um cliente existente.
-   - Cada conta possui um número único e pertence a uma agência específica.
+1. **Gerenciamento de Clientes**:
+   - Cadastro de novos clientes (pessoas físicas) com informações como nome, CPF, data de nascimento e endereço.
+   - Verificação de duplicidade de CPF para evitar clientes repetidos.
 
-3. **Mostrar Contas:**
-   - Exibe todas as contas cadastradas, com detalhes como agência, número da conta e nome do titular.
+2. **Gerenciamento de Contas**:
+   - Criação de contas correntes vinculadas a clientes existentes.
+   - Cada conta possui um número único, agência padrão ("0001") e um titular (cliente).
+   - Limite de saque diário e número máximo de saques configuráveis.
 
-4. **Modularização do Código:**
-   - O código foi dividido em funções específicas, como `depositar`, `sacar`, `exibir_extrato`, `adicionar_cliente`, `criar_conta` e `mostrar_contas`.
+3. **Operações Bancárias**:
+   - **Depósito**: Permite que clientes depositem valores em suas contas.
+   - **Saque**: Permite que clientes sacam valores de suas contas, respeitando os limites diários e por saque.
+   - **Extrato**: Exibe o histórico de transações (depósitos e saques) e o saldo atual da conta.
+
+4. **Histórico de Transações**:
+   - Todas as transações (depósitos e saques) são registradas com data e hora, permitindo que os clientes visualizem seu extrato.
+
+5. **Menu Interativo**:
+   - Interface de linha de comando para facilitar a navegação e execução das operações.
+
+6. **Modularização do Código**:
+   - O código foi organizado em classes e métodos específicos, como `Cliente`, `Conta`, `ContaCorrente`, `Transacao`, `Historico`, entre outros.
    - Isso melhora a legibilidade, manutenção e escalabilidade do código.
 
-5. **Uso de Dicionários:**
-   - As informações dos clientes e contas são armazenadas em dicionários, o que facilita o gerenciamento e a consulta dos dados.
-
-6. **Validações Aprimoradas:**
+7. **Validações Aprimoradas**:
    - Adição de validações para garantir que operações como depósito e saque sejam realizadas apenas com valores válidos.
-
+   - Verificação de limites de saque e número máximo de saques diários.
+  
 ---
+
+## Contribuições
+Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorar o sistema bancário.
